@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MetApp">
+<head>
+  <meta charset="UTF-8">
+  <title>The Metropolitan Museum of Art</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+
+<section ng-controller="HomeController">
+  <h1> {{ header }} </h1>
+  <img src = "{{ img }}" alt="peppa" >
+</section>
+
+
+<section ng-controller="GeneralInfoController">
+  <h2>General Info:</h2>
+  <h3>Hours:</h3>
+  <ul>
+    <li>Friday: {{ lateHours }} </li>
+    <li>Monday: {{normalHours}} </li>
+    <li>Saturday: {{ lateHours }} </li>
+    <li>Sunday: {{normalHours}} </li>
+    <li>Thursday: {{normalHours}} </li>
+    <li>Tuesday: {{normalHours}} </li>
+    <li>Wednesday: {{normalHours}} </li>
+  </ul>
+</section>
+
+<section ng-controller="DonorInfoController">
+  <h2>Donor Information: </h2>
+  <h3>Contact: </h3>
+    <p> {{ email }} </p>
+  <h3>Donation amounts: </h3>
+
+  angular.forEach(amount, function
+    <li> {{ amount }} </li>
+  )
+
+</section>
+
+</body>
+</html>
